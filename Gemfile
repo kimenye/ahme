@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'figaro'
 gem 'haml-rails'
 gem 'thin'
+gem 'devise'
 group :assets do
   gem 'compass-rails'
   gem 'zurb-foundation'
