@@ -1,0 +1,28 @@
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+  <Name>AHME Portal Intranet</Name>
+  <Description>AHME Portal is the internal homepage for the AHME project</Description>
+
+  <!-- Administrators and users will be sent to this URL for application support -->
+  <Support>
+    <Link rel="support" href="http://ahmeportal.herokuapp.com/support" />
+  </Support>
+
+  <!-- Show this link in Google's universal navigation for all users -->
+  <Extension id="navLink" type="link">
+    <Name>AHME Stakeholder Database</Name>
+    <Url>http://ahmeportal.herokuapp.com/login?openid_identifier=${DOMAIN_NAME}</Url>
+    <Scope ref="contactsAPI"/>
+  </Extension>
+
+  <!-- Declare our OpenID realm so our app is white listed -->
+  <Extension id="realm" type="openIdRealm">
+    <Url>http://ahmeportal.herokuapp.com</Url>
+  </Extension>
+
+  <!-- Need access to the Contacts API -->
+  <Scope id="contactsAPI">
+    <Url>https://www.google.com/m8/feeds/</Url>
+    <Reason>This app needs to access the AHME Portal Contacts.</Reason>
+  </Scope>
+
+</ApplicationManifest>
