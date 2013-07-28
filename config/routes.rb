@@ -1,4 +1,7 @@
 Ahme::Application.routes.draw do
+  resources :accouncements
+
+
   #devise_for :users, :controllers => { :omniauth => "users/omniauth_callbacks" }
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
