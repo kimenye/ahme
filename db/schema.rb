@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130728160745) do
 
-  create_table "accouncements", :force => true do |t|
+  create_table "announcements", :force => true do |t|
     t.integer  "user_id"
     t.string   "title"
     t.string   "body"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20130728160745) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "accouncements", ["user_id"], :name => "index_accouncements_on_user_id"
+  add_index "announcements", ["user_id"], :name => "index_announcements_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

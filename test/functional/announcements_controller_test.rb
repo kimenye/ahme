@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AccouncementsControllerTest < ActionController::TestCase
+class AnnouncementsControllerTest < ActionController::TestCase
   setup do
     @accouncement = accouncements(:one)
   end

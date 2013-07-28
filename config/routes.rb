@@ -1,5 +1,5 @@
 Ahme::Application.routes.draw do
-  resources :accouncements
+  resources :AnnouncementsController
 
 
   #devise_for :users, :controllers => { :omniauth => "users/omniauth_callbacks" }

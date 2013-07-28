@@ -1,8 +1,8 @@
-class AccouncementsController < ApplicationController
+class AnnouncementsController < ApplicationController
   # GET /accouncements
   # GET /accouncements.json
   def index
-    @accouncements = Accouncement.all
+    @accouncements = Announcement.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class AccouncementsController < ApplicationController
   # GET /accouncements/1
   # GET /accouncements/1.json
   def show
-    @accouncement = Accouncement.find(params[:id])
+    @accouncement = Announcement.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class AccouncementsController < ApplicationController
   # GET /accouncements/new
   # GET /accouncements/new.json
   def new
-    @accouncement = Accouncement.new
+    @accouncement = Announcement.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class AccouncementsController < ApplicationController
   # POST /accouncements
   # POST /accouncements.json
   def create
-    @accouncement = Accouncement.new(params[:accouncement])
+    @accouncement = Announcement.new(params[:accouncement])
 
     respond_to do |format|
       if @accouncement.save
@@ -56,7 +56,7 @@ class AccouncementsController < ApplicationController
   # PUT /accouncements/1
   # PUT /accouncements/1.json
   def update
-    @accouncement = Accouncement.find(params[:id])
+    @accouncement = Announcement.find(params[:id])
 
     respond_to do |format|
       if @accouncement.update_attributes(params[:accouncement])
@@ -72,7 +72,7 @@ class AccouncementsController < ApplicationController
   # DELETE /accouncements/1
   # DELETE /accouncements/1.json
   def destroy
-    @accouncement = Accouncement.find(params[:id])
+    @accouncement = Announcement.find(params[:id])
     @accouncement.destroy
 
     respond_to do |format|
