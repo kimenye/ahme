@@ -15,6 +15,7 @@ gem 'devise'
 gem 'omniauth-google-apps'
 gem 'pry'
 gem 'pry-nav'
+gem 'omniauth-google-oauth2'
 group :assets do
   gem 'compass-rails'
   gem 'zurb-foundation'
@@ -30,4 +31,7 @@ group :test do
   gem 'capybara'
   gem 'minitest-spec-rails'
   gem 'minitest-wscolor'
+end
+group :production do
+  gem 'pg'
 end

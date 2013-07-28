@@ -1,2 +1,3 @@
 = link_to "Ahme", root_path, :class => 'brand'
-= link_to 'GMail', user_omniauth_authorize_path(:google_apps)
+-#= link_to 'GMail', user_omniauth_authorize_path(:google_apps)
+= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
