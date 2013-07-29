@@ -18,6 +18,7 @@ gem 'pry-nav'
 gem 'omniauth-google-oauth2'
 gem 'activeadmin'
 gem 'jquery-rails', '~> 2.3.0'
+gem 'ui_datepicker-rails3'
 group :assets do
   gem 'compass-rails'
   gem 'zurb-foundation'

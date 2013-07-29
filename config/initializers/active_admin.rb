@@ -210,5 +210,5 @@ ActiveAdmin.setup do |config|
   #
   # config.filters = true
 
-
+  UiDatePickerRails3.activate :active_admin
 end
