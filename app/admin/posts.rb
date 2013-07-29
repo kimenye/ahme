@@ -1,5 +1,12 @@
 ActiveAdmin.register Post do
 
+  index do
+    column :title
+    column "By", :user
+    column "Posted", :created_at
+    actions
+  end
+
   show do
     render "post"
   end
