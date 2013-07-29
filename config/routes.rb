@@ -1,4 +1,6 @@
 Ahme::Application.routes.draw do
+
+
   resources :AnnouncementsController
 
 
@@ -8,4 +10,5 @@ Ahme::Application.routes.draw do
   #resources :users
 
   root :to => "home#index"
+  ActiveAdmin.routes(self)
 end

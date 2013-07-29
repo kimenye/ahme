@@ -1,0 +1,13 @@
+.announcements
+  %h3
+    Announcements
+  %hr
+  %ul
+    - @announcements.each do |announcement|
+      %li
+        %h6
+          = announcement.title
+        %p
+          = announcement.body
+        %span.date
+          = announcement.announcement_date.to_s(:when)
