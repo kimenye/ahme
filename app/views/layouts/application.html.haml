@@ -2,15 +2,17 @@
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title= content_for?(:title) ? yield(:title) : "Ahme"
-      %meta{:content => content_for?(:description) ? yield(:description) : "Ahme", :name => "description"}
+      %title= content_for?(:title) ? yield(:title) : "AHME Partnership Portal"
+      %meta{:content => content_for?(:description) ? yield(:description) : "AHME", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     #container.container
-      %header
+      .large-12.columns
+        %header
+      .large-10.large-centered.columns
         = render 'layouts/navigation'
         = render 'layouts/messages'
       #main{:role => "main"}
