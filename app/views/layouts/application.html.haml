@@ -10,11 +10,12 @@
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     #container.container
+      .row
+        .large-3.large-offset-9.columns.current_user
+          %a{:href => "/admin"}
+            = current_user.name
       .large-12.columns
         %header
-      .large-10.large-centered.columns
-        = render 'layouts/navigation'
-        = render 'layouts/messages'
       #main{:role => "main"}
         = yield
       %footer

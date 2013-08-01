@@ -1,1 +1,1 @@
-Time::DATE_FORMATS[:simple] = "%d,%B %Y"
+Time::DATE_FORMATS[:when] = "%d, %B %Y"

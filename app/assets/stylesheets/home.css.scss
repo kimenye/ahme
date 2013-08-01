@@ -2,9 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-header {
+header, .header {
   background: url(/assets/banner.jpg) no-repeat;
   width: 1000px;
-  height: 222px;
-  margin: auto;
+  height: 198px;
+  margin: 10px auto 0px;
+}
+
+.main-body {
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  min-height: 600px;
+}
+
+.current_user {
+  text-align: right;
+  padding: 5px;
+}
+
+.posts {
+  ul {
+    list-style-type: none;
+  }
+
+  .post_body {
+    margin-top: 15px;
+    border-bottom: 1px solid #dddddd;
+  }
+}
+
+.links {
+  ul {
+    list-style-type: none;
+  }
+
+  h6 {
+    color:  #666666;
+  }
+}
+
+.date {
+  display: block;
+  font-size: 13px;
+}
+
+.announcements {
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  h6 {
+    color: #666666;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .date {
+    text-align: right;
+  }
+}
+
+.posts,
+.left-sidebar,
+.right-sidebar {
+  padding: 10px 10px;
+}
+
+.home {
+  h3 {
+    font-weight: normal;
+    color: #26ACDC;
+    margin-bottom: 5px;
+  }
+
+  hr {
+    margin-top: 0px;
+  }
 }

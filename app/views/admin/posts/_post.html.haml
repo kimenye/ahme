@@ -1,0 +1,9 @@
+%h3
+  = @post.title
+%span.date
+  Posted
+  = @post.created_at.to_s(:when)
+  by
+  = @post.user.name
+.post_body
+  = @post.body.html_safe

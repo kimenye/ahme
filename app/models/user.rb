@@ -32,6 +32,11 @@ class User < ActiveRecord::Base
     user
   end
 
+  def is_admin?
+    #self.email && ENV['ADMIN_EMAILS'].to_s.include?(self.email)
+    true
+  end
+
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session['devise.googleapps_data'] && session['devise.googleapps_data']['user_info']
