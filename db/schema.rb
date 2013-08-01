@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729085226) do
+ActiveRecord::Schema.define(:version => 20130801170258) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20130729085226) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "categories_posts", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "post_id"
+  end
+
+  add_index "categories_posts", ["category_id", "post_id"], :name => "index_categories_posts_on_category_id_and_post_id"
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.string   "body"
@@ -64,6 +71,19 @@ ActiveRecord::Schema.define(:version => 20130729085226) do
     t.integer  "owner_id"
     t.text     "uri_cache"
     t.string   "simplified_type",        :default => "file"
+  end
+
+  create_table "stakeholders", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "country"
+    t.string   "organisation"
+    t.string   "tel"
+    t.string   "email"
+    t.string   "physical_address"
+    t.string   "description"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|
