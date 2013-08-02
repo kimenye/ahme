@@ -2,11 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-header, .header {
+$tagBlue: #387fc1;
+.header {
   background: url(/assets/banner.jpg) no-repeat;
   width: 1000px;
   height: 198px;
   margin: 10px auto 0px;
+  display: block;
 }
 
 .main-body {
@@ -20,6 +22,13 @@ header, .header {
   padding: 5px;
 }
 
+.admin_posts {
+  .title {
+    margin-top: 20px;
+    border-bottom: 1px solid #dddddd;
+  }
+}
+
 .posts {
   ul {
     list-style-type: none;
@@ -28,6 +37,40 @@ header, .header {
   .post_body {
     margin-top: 15px;
     border-bottom: 1px solid #dddddd;
+  }
+
+  .tags {
+    list-style-type: none;
+    margin-left: 0px;
+
+    li {
+      font-size: 13px;
+      color: #26ACDC;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  .filed_in {
+    margin-top: 15px;
+
+    .main {
+      float: left;
+      height: 21px;
+      padding: 4px 5px 5px 5px;
+      background: $tagBlue;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 3px 0px 0px 3px;
+    }
+
+    .tag {
+      background: url(/assets/tag.png) no-repeat;
+      height: 21px;
+      width: 12px;
+      margin-left: -1px;
+      float: right;
+    }
   }
 }
 

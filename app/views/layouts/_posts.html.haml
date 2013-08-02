@@ -2,12 +2,25 @@
   %ul
     - @posts.each do |post|
       %li
-        %h3
-          = post.title
-        %span.date
-          Posted
-          = post.created_at.to_s(:when)
-          by
-          = post.user.name
+        .title
+          %h3
+            = post.title
+          %span.date
+            Posted
+            = post.created_at.to_s(:when)
+            by
+            = post.user.name
+          - if (categories = post.categories).any?
+            %ul.tags
+              - categories.each do |category|
+                %li.tag
+                  = category.name
+            -#.row
+              .ten.columns
+                %aside.filed_in
+                  - categories.each do |category|
+                    .category
+                      = link_to category.name, root_path, :class => "tag"
+                      -#= link_to "", refinery.blog_category_path(category), :class => "tag"
         .post_body
           = post.body.html_safe

@@ -15,7 +15,7 @@
           %a{:href => "/admin"}
             = current_user.name
       .large-12.columns
-        %header
+        %a.header{:href => root_path}
       #main{:role => "main"}
         = yield
       %footer
