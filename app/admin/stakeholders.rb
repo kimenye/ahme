@@ -13,5 +13,4 @@ ActiveAdmin.register Stakeholder do
     end
     f.buttons
   end
-  config.comments = false
 end

@@ -1,5 +1,8 @@
 Ahme::Application.routes.draw do
 
+  resources :comments
+
+
   mount Rich::Engine => '/rich', :as => 'rich'
 
   resources :AnnouncementsController
