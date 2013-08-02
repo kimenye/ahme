@@ -39,6 +39,14 @@ $tagBlue: #387fc1;
     border-bottom: 1px solid #dddddd;
   }
 
+  .comments {
+    border-top:  1px dashed #dddddd;
+
+    ul {
+      margin-left: 30px;
+    }
+  }
+
   .tags {
     list-style-type: none;
     margin-left: 0px;
