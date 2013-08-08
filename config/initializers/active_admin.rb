@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Ahme"
+  config.site_title = "AHME Portal"
 
   config.current_user_method = :current_user
   config.logout_link_path = :destroy_user_session_path
@@ -97,6 +97,7 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   # config.root_to = 'dashboard#index'
+  config.root_to = 'posts#index'
 
   # == Admin Comments
   #

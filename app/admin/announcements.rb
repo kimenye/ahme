@@ -1,5 +1,7 @@
 ActiveAdmin.register Announcement do
 
+  menu :parent => "Admin"
+
   form do |f|
     f.inputs "Announcement Details" do
       f.input :title

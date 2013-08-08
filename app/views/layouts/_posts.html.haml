@@ -2,12 +2,46 @@
   %ul
     - @posts.each do |post|
       %li
-        %h3
-          = post.title
-        %span.date
-          Posted
-          = post.created_at.to_s(:when)
-          by
-          = post.user.name
+        .title
+          %h3
+            = post.title
+          %span.date
+            Posted
+            = post.created_at.to_s(:when)
+            by
+            = post.user.name
+          - if (categories = post.categories).any?
+            %ul.tags
+              - categories.each do |category|
+                %li.tag
+                  %a{:href => "?category=#{category.id}"}
+                    = category.name
+            -#.row
+              .ten.columns
+                %aside.filed_in
+                  - categories.each do |category|
+                    .category
+                      = link_to category.name, root_path, :class => "tag"
+                      -#= link_to "", refinery.blog_category_path(category), :class => "tag"
         .post_body
           = post.body.html_safe
+
+          %form.comment{:method => "POST", :action => comment_path}
+            %textarea{:name => "post_content[text]"}
+            %input{:type => "hidden", :name => "post_content[post_id]", :value => post.id}
+            %input{:type => "hidden", :name => "post_content[user_id]", :value => current_user.id}
+            %input.button.small{:type => "submit", :value => "Comment"}
+          - if (comments = post.post_comments).any?
+            .comments
+              %h6
+                #{post.post_comments.size} Comment(s)
+              %ul
+                - comments.each do |comment|
+                  %li.comment
+                    %span.date
+                      by
+                      = comment.user.name
+                    %p
+                      = comment.text
+
+
