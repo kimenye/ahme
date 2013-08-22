@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130802034633) do
+ActiveRecord::Schema.define(:version => 20130822045322) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,11 +46,9 @@ ActiveRecord::Schema.define(:version => 20130802034633) do
   end
 
   create_table "categories_posts", :id => false, :force => true do |t|
-    t.integer "category_id"
     t.integer "post_id"
+    t.integer "category_id"
   end
-
-  add_index "categories_posts", ["category_id", "post_id"], :name => "index_categories_posts_on_category_id_and_post_id"
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -80,11 +78,6 @@ ActiveRecord::Schema.define(:version => 20130802034633) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
-  end
-
-  create_table "posts_categories", :id => false, :force => true do |t|
-    t.integer "post_id"
-    t.integer "category_id"
   end
 
   create_table "rich_rich_files", :force => true do |t|
