@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def authenticate_google_apps_user!
     redirect_to user_omniauth_authorize_path(:google_oauth2) unless user_signed_in?
   end
+
+  def after_sign_out_path_for(resource_or_scope)
+    ENV['SIGNOUT_URL']
+  end
 end
