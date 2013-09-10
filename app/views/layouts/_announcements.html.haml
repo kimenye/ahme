@@ -10,4 +10,5 @@
         %p
           = announcement.body
         %span.date
-          = announcement.announcement_date.to_s(:when)
+          - if !announcement.announcement_date.nil?
+            = announcement.announcement_date.to_s(:when)
