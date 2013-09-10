@@ -37,6 +37,11 @@ $tagBlue: #387fc1;
   .post_body {
     margin-top: 15px;
     border-bottom: 1px solid #dddddd;
+
+    p {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
   }
 
   .comments {

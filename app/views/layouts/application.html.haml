@@ -14,6 +14,8 @@
         .large-3.large-offset-9.columns.current_user
           %a{:href => "/admin"}
             = current_user.name
+          |
+          = link_to "Sign out", destroy_user_session_path, :method => "delete"
       .large-12.columns
         %a.header{:href => root_path}
       #main{:role => "main"}

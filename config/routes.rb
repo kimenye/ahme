@@ -10,7 +10,7 @@ Ahme::Application.routes.draw do
 
   resources :AnnouncementsController
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :sessions => "users/sessions" }
 
   root :to => "home#index"
   match 'comment' => 'home#post_a_comment', :as => :comment
